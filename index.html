@@ -45,6 +45,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
+            overflow: hidden; /* Prevent scrollbars from appearing */
         }
 
         /* Fullscreen YouTube Video */
@@ -63,6 +64,7 @@
             border: none;
             pointer-events: none; /* Disable interaction */
             transform: scale(1.2); /* Zoomed-in effect */
+            object-fit: cover; /* Ensures the video fills the screen */
         }
 
         /* Logo */
@@ -154,10 +156,12 @@
 </head>
 <body>
 
+    <!-- YouTube Video as Background -->
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/jYk1GUVOR0w?autoplay=1&start=10&controls=0" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/jYk1GUVOR0w?autoplay=1&start=10&controls=0&mute=0&modestbranding=1&fs=0&rel=0" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
     </div>
 
+    <!-- Logo -->
     <div class="inkyLogo">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412.5" height="90" viewBox="0,0,109.87869,23.80992">
             <g transform="translate(-185.06066,-165.61484)">
@@ -170,18 +174,21 @@
         </svg>
     </div>
 
+    <!-- Welcome Text -->
     <p class="Welcome">Join INKY, where passion, strategy, and teamwork come together to create an unbeatable force! Whether you're a seasoned player or just starting out, INKY welcomes anyone eager to learn, grow, and conquer. Our tight-knit community thrives on collaboration, and we're dedicated to pushing the limits in every server we play. We have a support system that will help you get better faster than ever before. If you're looking for fun and victory, then INKY is your clan! Don't wait! Become part of the ink that writes our DOMINATION IN EVERY SERVER WE PLAY!</p>
 
+    <!-- Join Text -->
     <p class="join">Would you like to join Team Inky? We have a Discord where our team connects, chats, and plans together!</p>
 
+    <!-- Discord Button -->
     <a href="https://discord.gg/a6JAHVBNSx" class="discord-button" target="_blank" rel="noopener noreferrer">
         Join The Discord
     </a>
 
+    <!-- Discord Widget -->
     <iframe class="joinwidget" src="https://discord.com/widget?id=1267246793041907733&theme=dark"
             width="350" height="500" allowtransparency="true" frameborder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
 </body>
 </html>
-
