@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Inky</title>
     <style>
+        .discord-button {
+            display: inline-block;
+            background-color: #5865F2; /* Discord blue */
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.2s; /* Transition box-shadow */
+            z-index: 1;
+            position: absolute;
+            top: 97%; /* Adjusted to place below "join" text */
+            left: 35%;
+            transform: translateX(-50%);
+            margin-bottom: 20px; /* Ensures there's space below the button */
+        }
+
+        .discord-button:hover {
+            background-color: #4752c4; /* Darker Discord blue */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increases on hover */
+        }
+
+        .discord-button:active {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Active shadow */
+        }
+
         @font-face {
             font-family: "Rust";
             src: url("https://kk1212kk.github.io/TeamInky/rust.ttf") format("truetype");
@@ -59,10 +87,10 @@
         /* Join Text */
         .join {
             position: absolute;
-            top: 60%;
-            left: 50%;
+            top: 85%; /* Adjusted to place below "join" text */
+            left: 35%;
             transform: translateX(-50%);
-            font-size: 28px;
+            font-size: 24px;
             text-align: center;
             z-index: 1;
         }
@@ -70,8 +98,8 @@
         /* Discord Widget */
         .joinwidget {
             position: absolute;
-            top: 75%;
-            left: 50%;
+            top: 85%;
+            left: 85%;
             transform: translateX(-50%);
             z-index: 1;
         }
@@ -86,6 +114,7 @@
             .join {
                 font-size: 20px;
                 top: 50%;
+                left: 20%;
             }
 
             .joinwidget {
@@ -104,12 +133,13 @@
             .join {
                 font-size: 18px;
                 top: 45%;
+                left: 20%;
             }
 
-            .joinwidget {
-                top: 60%;
-                width: 90%;
-                height: 300px;
+            .discord-button {
+                position: absolute;
+                top: 97%; /* Adjusted to place below "join" text */
+                left: 35%; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -133,6 +163,12 @@
 
     <p class="join">Would you like to join Team Inky? We have a Discord where our team connects, chats, and plans together!</p>
 
-    <iframe class="joinwidget" src="https://discord.com/widget?id=1267246793041907733&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <a href="https://discord.gg/a6JAHVBNSx" class="discord-button" target="_blank" rel="noopener noreferrer">
+        Join The Discord
+    </a>
+    <iframe class="joinwidget" src="https://discord.com/widget?id=1267246793041907733&theme=dark"
+            width="350" height="500" allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
 </body>
 </html>
