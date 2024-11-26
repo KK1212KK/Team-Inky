@@ -48,7 +48,7 @@
             overflow: hidden; /* Prevent scrollbars from appearing */
         }
 
-        /* Fullscreen YouTube Video */
+        /* Fullscreen Video as Background */
         .video-container {
             position: fixed;
             top: 0;
@@ -58,13 +58,11 @@
             z-index: -1; /* Ensure the video stays behind other content */
         }
 
-        .video-container iframe {
+        .video-container video {
             width: 100%;
             height: 100%;
-            border: none;
-            pointer-events: none; /* Disable interaction */
-            transform: scale(1.2); /* Zoomed-in effect */
             object-fit: cover; /* Ensures the video fills the screen */
+            transform: scale(1.2); /* Zoomed-in effect */
         }
 
         /* Logo */
@@ -156,9 +154,12 @@
 </head>
 <body>
 
-    <!-- YouTube Video as Background -->
+    <!-- Video Background -->
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/jYk1GUVOR0w?autoplay=1&start=10&controls=0&mute=0&modestbranding=1&fs=0&rel=0" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
+        <video autoplay loop muted>
+            <source src="cinematic.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <!-- Logo -->
@@ -192,3 +193,4 @@
 
 </body>
 </html>
+
