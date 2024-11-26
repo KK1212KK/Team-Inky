@@ -41,7 +41,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: auto;
-            font-family: "Rust", sans-serif; /* Apply Rust font here for fallback */
+            font-family: "Rust", sans-serif;
         }
 
         /* Welcome Text */
@@ -75,21 +75,26 @@
             transform: translateX(-50%);
             z-index: 1;
         }
+
+        /* Login Button */
+        .login-button {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            background-color: #8c0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .login-button:hover {
+            background-color: #a50000;
+        }
     </style>
 </head>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/674591402480f5b4f5a43658/1idjrupao';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 <body>
 
     <div class="background-image"></div>
@@ -112,5 +117,9 @@ s0.parentNode.insertBefore(s1,s0);
 
     <iframe class="joinwidget" src="https://discord.com/widget?id=1267246793041907733&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
+    <!-- Login Button -->
+    <button class="login-button" onclick="window.location.href='login.php';">Login</button>
+
 </body>
 </html>
+
