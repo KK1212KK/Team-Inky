@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Inky</title>
     <style>
-       @font-face {
+        @font-face {
             font-family: "Rust";
             src: url("https://kk1212kk.github.io/TeamInky/rust.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
-            font-display: swap; /* Ensures the custom font is swapped with a fallback until it's loaded */
+            font-display: swap;
         }
 
         body {
@@ -37,11 +37,11 @@
         /* Logo */
         .inkyLogo {
             position: absolute;
-            top: 20%;
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
             width: auto;
-            font-family: "Rust", sans-serif;
+            text-align: center;
         }
 
         /* Welcome Text */
@@ -62,7 +62,7 @@
             top: 60%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 32px;
+            font-size: 28px;
             text-align: center;
             z-index: 1;
         }
@@ -70,34 +70,51 @@
         /* Discord Widget */
         .joinwidget {
             position: absolute;
-            top: 80%;
+            top: 75%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
         }
 
-        /* Login Button */
-        .login-button {
-            position: absolute;
-            top: 10%;
-            right: 5%;
-            background-color: #8c0000;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px
-            display: none;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .Welcome {
+                font-size: 18px;
+                top: 25%;
+            }
+
+            .join {
+                font-size: 20px;
+                top: 50%;
+            }
+
+            .joinwidget {
+                top: 65%;
+                width: 90%;
+                height: 300px;
+            }
         }
 
-        .login-button:hover {
-            background-color: #a50000;
+        @media (max-width: 480px) {
+            .Welcome {
+                font-size: 16px;
+                top: 20%;
+            }
+
+            .join {
+                font-size: 18px;
+                top: 45%;
+            }
+
+            .joinwidget {
+                top: 60%;
+                width: 90%;
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
-
     <div class="background-image"></div>
 
     <div class="inkyLogo">
@@ -117,10 +134,5 @@
     <p class="join">Would you like to join Team Inky? We have a Discord where our team connects, chats, and plans together!</p>
 
     <iframe class="joinwidget" src="https://discord.com/widget?id=1267246793041907733&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-    <!-- Login Button -->
-   <!-- <button class="login-button" onclick="window.location.href='login.php';">Login</button>
--->
 </body>
 </html>
-
