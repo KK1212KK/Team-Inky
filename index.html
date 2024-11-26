@@ -44,22 +44,25 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: black;
             color: white;
         }
 
-        /* Background Image */
-        .background-image {
+        /* Fullscreen YouTube Video */
+        .video-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            background-image: url('https://mrwallpaper.com/images/hd/caption-3d-rust-logo-design-jl6tvp67sbwc890j.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            z-index: -1; /* Ensure the video stays behind other content */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: none; /* Disable interaction */
+            transform: scale(1.2); /* Zoomed-in effect */
         }
 
         /* Logo */
@@ -75,7 +78,7 @@
         /* Welcome Text */
         .Welcome {
             position: absolute;
-            top: 30%;
+            top: 50%;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -122,6 +125,11 @@
                 width: 90%;
                 height: 300px;
             }
+
+            .video-container {
+                width: 90%;
+                height: 300px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -145,7 +153,10 @@
     </style>
 </head>
 <body>
-    <div class="background-image"></div>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/jYk1GUVOR0w?autoplay=1&start=10&controls=0" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <div class="inkyLogo">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412.5" height="90" viewBox="0,0,109.87869,23.80992">
@@ -166,9 +177,11 @@
     <a href="https://discord.gg/a6JAHVBNSx" class="discord-button" target="_blank" rel="noopener noreferrer">
         Join The Discord
     </a>
+
     <iframe class="joinwidget" src="https://discord.com/widget?id=1267246793041907733&theme=dark"
             width="350" height="500" allowtransparency="true" frameborder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
 </body>
 </html>
+
